@@ -1,0 +1,54 @@
+# Universal Windows Platform
+# Build a Universal Windows Platform project using Visual Studio.
+# Add steps that test and distribute an app, save build artifacts, and more:
+# https://aka.ms/yaml
+
+trigger:
+- main
+
+pool:
+  vmImage: 'windows-latest'
+
+variables:
+  solution: 'DevOpstest.sln'
+  buildPlatform: 'x64'
+  buildConfiguration: 'Release'
+  appxPackageDir: '$(build.artifactStagingDirectory)\AppxPackages\\'
+
+steps:
+- task: NuGetToolInstaller@1
+
+- task: NuGetCommand@2
+  inputs:
+    restoreSolution: '**/*.sln'
+    
+
+- task: MsixPackaging@1
+  inputs:
+    outputPath: '$(appxPackageDir)\DevOpsTest.msix'
+    solution: '$(solution)'
+    clean: false
+    generateBundle: false
+    buildConfiguration: '$(buildConfiguration)'
+    buildPlatform: '$(buildPlatform)'
+    updateAppVersion: true
+    #manifestFile: 'DeveloperLabs\MyEmployees\MyEmployees.Package\Package.appxmanifest'
+    #appVersion: '$(GitBuildVersionSimple).0'
+    appPackageDistributionMode: 'SideloadOnly'
+    msbuildLocationMethod: 'version'
+    msbuildVersion: 'latest'
+    msbuildArchitecture: 'x86'
+
+
+
+- task: MsixSigning@1
+  inputs:
+    package: '$(Build.ArtifactStagingDirectory)\**\*.msix*'
+    certificate: 'Contoso.pfx'
+    passwordVariable: 'PfxPass'
+
+- task: PublishBuildArtifacts@1
+  inputs:
+    PathtoPublish: '$(appxPackageDir)'
+    ArtifactName: 'drop'
+    publishLocation: 'Container'

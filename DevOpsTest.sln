@@ -1,0 +1,62 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31410.357
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{C7167F0D-BC9F-4E6E-AFE1-012C56B48DB5}") = "DevOpsTest (Package)", "DevOpsTest\DevOpsTest (Package)\DevOpsTest (Package).wapproj", "{CCA739CD-B76D-478A-A255-7D6F368798F0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DevOpsTest", "DevOpsTest\DevOpsTest\DevOpsTest.csproj", "{60DBF1D8-9727-4C4B-B22E-F52AD8893543}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Files", "Solution Files", "{7009C2FA-581F-4533-9EDB-75C7B1CA4EAB}"
+	ProjectSection(SolutionItems) = preProject
+		azure-pipeline.yaml = azure-pipeline.yaml
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|arm64 = Debug|arm64
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|arm64 = Release|arm64
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CCA739CD-B76D-478A-A255-7D6F368798F0}.Debug|arm64.ActiveCfg = Debug|arm64
+		{CCA739CD-B76D-478A-A255-7D6F368798F0}.Debug|arm64.Build.0 = Debug|arm64
+		{CCA739CD-B76D-478A-A255-7D6F368798F0}.Debug|arm64.Deploy.0 = Debug|arm64
+		{CCA739CD-B76D-478A-A255-7D6F368798F0}.Debug|x64.ActiveCfg = Debug|x64
+		{CCA739CD-B76D-478A-A255-7D6F368798F0}.Debug|x64.Build.0 = Debug|x64
+		{CCA739CD-B76D-478A-A255-7D6F368798F0}.Debug|x64.Deploy.0 = Debug|x64
+		{CCA739CD-B76D-478A-A255-7D6F368798F0}.Debug|x86.ActiveCfg = Debug|x86
+		{CCA739CD-B76D-478A-A255-7D6F368798F0}.Debug|x86.Build.0 = Debug|x86
+		{CCA739CD-B76D-478A-A255-7D6F368798F0}.Debug|x86.Deploy.0 = Debug|x86
+		{CCA739CD-B76D-478A-A255-7D6F368798F0}.Release|arm64.ActiveCfg = Release|arm64
+		{CCA739CD-B76D-478A-A255-7D6F368798F0}.Release|arm64.Build.0 = Release|arm64
+		{CCA739CD-B76D-478A-A255-7D6F368798F0}.Release|arm64.Deploy.0 = Release|arm64
+		{CCA739CD-B76D-478A-A255-7D6F368798F0}.Release|x64.ActiveCfg = Release|x64
+		{CCA739CD-B76D-478A-A255-7D6F368798F0}.Release|x64.Build.0 = Release|x64
+		{CCA739CD-B76D-478A-A255-7D6F368798F0}.Release|x64.Deploy.0 = Release|x64
+		{CCA739CD-B76D-478A-A255-7D6F368798F0}.Release|x86.ActiveCfg = Release|x86
+		{CCA739CD-B76D-478A-A255-7D6F368798F0}.Release|x86.Build.0 = Release|x86
+		{CCA739CD-B76D-478A-A255-7D6F368798F0}.Release|x86.Deploy.0 = Release|x86
+		{60DBF1D8-9727-4C4B-B22E-F52AD8893543}.Debug|arm64.ActiveCfg = Debug|arm64
+		{60DBF1D8-9727-4C4B-B22E-F52AD8893543}.Debug|arm64.Build.0 = Debug|arm64
+		{60DBF1D8-9727-4C4B-B22E-F52AD8893543}.Debug|x64.ActiveCfg = Debug|x64
+		{60DBF1D8-9727-4C4B-B22E-F52AD8893543}.Debug|x64.Build.0 = Debug|x64
+		{60DBF1D8-9727-4C4B-B22E-F52AD8893543}.Debug|x86.ActiveCfg = Debug|x86
+		{60DBF1D8-9727-4C4B-B22E-F52AD8893543}.Debug|x86.Build.0 = Debug|x86
+		{60DBF1D8-9727-4C4B-B22E-F52AD8893543}.Release|arm64.ActiveCfg = Release|arm64
+		{60DBF1D8-9727-4C4B-B22E-F52AD8893543}.Release|arm64.Build.0 = Release|arm64
+		{60DBF1D8-9727-4C4B-B22E-F52AD8893543}.Release|x64.ActiveCfg = Release|x64
+		{60DBF1D8-9727-4C4B-B22E-F52AD8893543}.Release|x64.Build.0 = Release|x64
+		{60DBF1D8-9727-4C4B-B22E-F52AD8893543}.Release|x86.ActiveCfg = Release|x86
+		{60DBF1D8-9727-4C4B-B22E-F52AD8893543}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C356145A-4EA2-4CAD-ABAF-68C915658864}
+	EndGlobalSection
+EndGlobal
