@@ -10,7 +10,7 @@ pool:
   vmImage: 'windows-latest'
 
 variables:
-  solution: 'DevOpstest.sln'
+  solution: 'DevOpsTest.sln'
   buildPlatform: 'x64'
   buildConfiguration: 'Release'
   appxPackageDir: '$(build.artifactStagingDirectory)\AppxPackages\\'
@@ -21,23 +21,28 @@ steps:
 - task: NuGetCommand@2
   inputs:
     restoreSolution: '**/*.sln'
-    
 
-- task: MsixPackaging@1
+- task: VSBuild@1
+  displayName: 'Build'
   inputs:
-    outputPath: '$(appxPackageDir)\DevOpsTest.msix'
+    platform: 'x86'
     solution: '$(solution)'
-    clean: false
-    generateBundle: false
-    buildConfiguration: '$(buildConfiguration)'
-    buildPlatform: '$(buildPlatform)'
-    updateAppVersion: true
-    #manifestFile: 'DeveloperLabs\MyEmployees\MyEmployees.Package\Package.appxmanifest'
-    #appVersion: '$(GitBuildVersionSimple).0'
-    appPackageDistributionMode: 'SideloadOnly'
-    msbuildLocationMethod: 'version'
-    msbuildVersion: 'latest'
-    msbuildArchitecture: 'x86'
+    configuration: '$(buildConfiguration)'
+    msbuildArgs: '/p:AppxBundlePlatforms="$(buildPlatform)" /p:AppxPackageDir="$(appxPackageDir)" /p:AppxBundle=Never /p:UapAppxPackageBuildMode=SideloadOnly /p:AppxPackageSigningEnabled=false'
+
+# - task: MsixPackaging@1
+#   inputs:
+#     outputPath: '$(appxPackageDir)\DevOpsTest.msix'
+#     solution: '$(solution)'
+#     clean: false
+#     generateBundle: false
+#     buildConfiguration: '$(buildConfiguration)'
+#     buildPlatform: '$(buildPlatform)'
+#     updateAppVersion: false
+#     appPackageDistributionMode: 'SideloadOnly'
+#     msbuildLocationMethod: 'version'
+#     msbuildVersion: 'latest'
+#     msbuildArchitecture: 'x86'
 
 # - task: MsixSigning@1
 #   inputs:
