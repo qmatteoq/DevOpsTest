@@ -10,7 +10,7 @@ pool:
   vmImage: 'windows-latest'
 
 variables:
-  solution: 'DevOpstest.sln'
+  solution: 'DevOpsTest.sln'
   buildPlatform: 'x64'
   buildConfiguration: 'Release'
   appxPackageDir: '$(build.artifactStagingDirectory)\AppxPackages\\'
@@ -31,9 +31,7 @@ steps:
     generateBundle: false
     buildConfiguration: '$(buildConfiguration)'
     buildPlatform: '$(buildPlatform)'
-    updateAppVersion: true
-    #manifestFile: 'DeveloperLabs\MyEmployees\MyEmployees.Package\Package.appxmanifest'
-    #appVersion: '$(GitBuildVersionSimple).0'
+    updateAppVersion: false
     appPackageDistributionMode: 'SideloadOnly'
     msbuildLocationMethod: 'version'
     msbuildVersion: 'latest'
