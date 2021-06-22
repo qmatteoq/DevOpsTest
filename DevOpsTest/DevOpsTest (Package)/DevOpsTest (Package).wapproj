@@ -38,7 +38,7 @@
   <PropertyGroup>
     <ProjectGuid>cca739cd-b76d-478a-a255-7d6f368798f0</ProjectGuid>
     <TargetPlatformVersion>10.0.19041.0</TargetPlatformVersion>
-    <TargetPlatformMinVersion>10.0.17763.0</TargetPlatformMinVersion>
+    <TargetPlatformMinVersion>10.0.19041.0</TargetPlatformMinVersion>
     <DefaultLanguage>en-US</DefaultLanguage>
     <AppxPackageSigningEnabled>false</AppxPackageSigningEnabled>
     <EntryPointProjectUniqueName>..\DevOpsTest\DevOpsTest.csproj</EntryPointProjectUniqueName>
